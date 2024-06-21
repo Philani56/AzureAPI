@@ -4,7 +4,7 @@ const cors = require('cors');
 const sql = require('mssql');
 
 const app = express();
-const port = 3000; // or any port number you prefer
+// const port = 3000; // or any port number you prefer
 
 // Database configuration
 const dbConfig = {
@@ -167,47 +167,9 @@ app.post('/submit-data', async (req, res) => {
   }
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// Start the server
-app.listen(port, () => {
+const port = process.env.PORT || 3000; // Use environment variable for port if available
+app.listen(port, '0.0.0.0', () => {
   console.log(`Server is running on port ${port}`);
+  return 
 });
+
